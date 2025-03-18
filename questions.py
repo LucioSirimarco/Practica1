@@ -17,8 +17,8 @@ answers = [
 ]
 # Índice de la respuesta correcta para cada pregunta, el mismo orden que las preguntas
 correct_answers_index = [1, 2, 0, 3, 1]
-# Seleccionar 3 preguntas aleatorias para el juego
-questions_to_ask = random.choices(list(zip(questions, answers, correct_answers_index)), k=3)
+# Seleccionar 3 preguntas aleatorias para el juego sin repetir
+questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
 # Inicializo la variable de puntaje
 user_points = float(0)
 # El usuario deberá contestar 3 preguntas
